@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks:
+    - name: Create service
+      command: kubectl apply -f create-fastapi-service.yml
+
+    - name: Expose Service
+      command: kubectl expose deployment fastapi-api --type=LoadBalancer --name=fastapi-container
+    
+    - name: Create Auto Scaling
+      command: kubectl autoscale deployment fastapi-api --cpu-percent=50 --min=1 --max=10

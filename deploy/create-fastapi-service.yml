@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-api
+spec:
+  selector:
+    matchLabels:
+      run: fastapi-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: fastapi-api
+    spec:
+      containers:
+      - name: fastapi-api
+        image: leonardodma/fastapi-image:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-api
+  labels:
+    run: fastapi-api
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: fastapi-api

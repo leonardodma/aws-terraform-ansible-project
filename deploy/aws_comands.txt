@@ -1,0 +1,5 @@
+# Criar configurar um usuário usando o aws cli, digitando as credenciais:
+$ aws configure
+
+# Configurar um acessos as kubernets
+$ aws eks --region us-east-1 update-kubeconfig --name eks --profile leonarodma
