@@ -13,7 +13,10 @@ $ terraform plan
 $ terraform apply
 ```
 
-## Para fazer o deploy auto-escalável, no diretório raíz do projeto:
+## Para fazer o deploy da plicação, auto-escalável, no diretório raíz do projeto:
+
+Foi feito uma [imagem docker](https://hub.docker.com/repository/docker/leonardodma/fastapi-image), com base no projeto feito para a diciplina "Megadados", a partir do [código fonte](https://github.com/leonardodma/ProjetoSQL-Fase2/tree/cloud).
+
 ```console
 $ cd ./deploy
 $ ansible-playbook playbook.yml
