@@ -40,3 +40,8 @@ Com o Metric Server configurado, é possível testar o auto scale, passando a UR
 ```console
 $ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.001; do wget -q -O- http://af24069e6d97b4ab789a96ee6cb4aa9e-2031127855.us-east-1.elb.amazonaws.com/docs; done"
 ```
+
+Para observar a escalabilidade:
+```console
+$ kubectl get horizontalpodautoscaler.autoscaling/fastapi-api --watch
+```
