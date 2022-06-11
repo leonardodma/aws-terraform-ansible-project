@@ -2,6 +2,10 @@
 
 O projeto tem como objetivo estruturar uma infraestrutura com kubernets uitilizando terraform, a fim de fazer Docker conteiners auto-escaláveis para uma aplicação. Para realizar o deploy automático dessa aplicação, foi utilizado o Ansible.
 
+# Para configurar as variáveis de ambiente, com as credencials, foi usado:
+```console
+$ TF_VAR_AWS_ACCESS_KEY_ID="foo" TF_VAR_AWS_SECRET_ACCESS_KEY="bar" terraform apply
+```
 
 ## Para aplicar a insfrastrura com o Kubernete Cluster, no diretório raíz do projeto:
 ```console
