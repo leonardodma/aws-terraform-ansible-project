@@ -5,12 +5,7 @@ O projeto tem como objetivo estruturar uma infraestrutura com kubernets uitiliza
 
 ## Para aplicar a insfrastrura com o Kubernete Cluster, no diretório raíz do projeto:
 ```console
-$ cd ./terraform
-$ export AWS_ACCESS_KEY_ID="anaccesskey"
-$ export AWS_SECRET_ACCESS_KEY="asecretkey"
-$ export AWS_REGION="us-west-1"
-$ terraform plan
-$ terraform apply
+$ TF_VAR_AWS_ACCESS_KEY_ID="foo" TF_VAR_AWS_SECRET_ACCESS_KEY="bar" terraform apply
 ```
 
 ## Para fazer o deploy auto-escalável, no diretório raíz do projeto:
