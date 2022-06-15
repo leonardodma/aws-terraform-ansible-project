@@ -51,3 +51,6 @@ Para observar a escalabilidade:
 ```console
 $ kubectl get horizontalpodautoscaler.autoscaling/fastapi-api --watch
 ```
+
+# Link da Demonstração 
+https://youtu.be/2e0WXBjSkJs
