@@ -41,10 +41,10 @@ Após isso, adicionar a linha seguinte, abaixo da linha "dnsPolicy: ClusterFirst
 hostNetwork: true
 ```
 
-Com o Metric Server configurado, é possível testar o auto scale, passando a URL do serviço subido, que no caso é http://af24069e6d97b4ab789a96ee6cb4aa9e-2031127855.us-east-1.elb.amazonaws.com/docs.
+Com o Metric Server configurado, é possível testar o auto scale, passando a URL do serviço subido, que no caso é http://a4cea7ba80eee4f16bf825c97749630c-1003223715.us-east-1.elb.amazonaws.com/docs.
 
 ```console
-$ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.001; do wget -q -O- http://af24069e6d97b4ab789a96ee6cb4aa9e-2031127855.us-east-1.elb.amazonaws.com/docs; done"
+$ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.001; do wget -q -O- http://a4cea7ba80eee4f16bf825c97749630c-1003223715.us-east-1.elb.amazonaws.com/docs; done"
 ```
 
 Para observar a escalabilidade:
